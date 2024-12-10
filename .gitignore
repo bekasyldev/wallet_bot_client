@@ -1,0 +1,19 @@
+# Environment variables
+.env
+*.env
+
+# Google API credentials
+key_*.json
+credentials*.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Data directory
+data/
+
+# IDE
+.vscode/
+.idea/

@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  bot:
+    build: .
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
+    volumes:
+      - ./data:/app/data
+      - ./${GOOGLE_SHEETS_CREDS_FILE}:/app/key_shet.json:ro
+      - ./${GOOGLE_DRIVE_CREDS_FILE}:/app/key_google_drive.json:ro
+    env_file:
+      - .env
+    restart: always
